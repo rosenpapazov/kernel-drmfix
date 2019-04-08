@@ -46,3 +46,5 @@ index 376ffe842e26..e8f694b57b8a 100644
  
  	/*
  	 * If the BIOS didn't enable everything it could, fall back to have the
+-- 
+2.20.1
