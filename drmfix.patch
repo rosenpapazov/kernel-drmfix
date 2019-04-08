@@ -1,25 +1,15 @@
-From patchwork Fri Feb 15 12:30:19 2019
-Content-Type: text/plain; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Subject: drm/i915/fbdev: Actually configure untiled displays
-From: Chris Wilson <chris@chris-wilson.co.uk>
-X-Patchwork-Id: 286290
-Message-Id: <20190215123019.32283-1-chris@chris-wilson.co.uk>
-To: intel-gfx@lists.freedesktop.org
-Date: Fri, 15 Feb 2019 12:30:19 +0000
+From 63a9dfe66b3b82b6eb10c6548aaf22dd7e543d2d Mon Sep 17 00:00:00 2001
+From: Adam Jackson <ajax@redhat.com>
+Date: Mon, 10 Jul 2017 08:11:48 -0700
+Subject: [PATCH] drm/i915: fix acer
 
-If we skipped all the connectors that were not part of a tile, we would
-leave conn_seq=0 and conn_configured=0, convincing ourselves that we
-had stagnated in our configuration attempts. Avoid this situation by
-starting conn_seq=ALL_CONNECTORS, and repeating until we find no more
-connectors to configure.
+This is _by far_ the most common backtrace for i915 on retrace.fp.o, and
+it's mostly useless noise.  There's not enough context when it's generated
+to know if something actually went wrong.  Downgrade the message to
+KMS debugging so we can still get it if we want it.
 
-Fixes: 754a76591b12 ("drm/i915/fbdev: Stop repeating tile configuration on stagnation")
-Reported-by: Maarten Lankhorst <maarten.lankhorst@linux.intel.com>
-Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
-Cc: Maarten Lankhorst <maarten.lankhorst@linux.intel.com>
-Reviewed-by: Maarten Lankhorst <maarten.lankhorst@linux.intel.com>
+Bugzilla: 1027037 1028785
+Upstream-status: http://lists.freedesktop.org/archives/intel-gfx/2013-November/035948.html
 ---
  drivers/gpu/drm/i915/intel_fbdev.c | 12 +++++-------
  1 file changed, 5 insertions(+), 7 deletions(-)
@@ -72,5 +62,5 @@ index 376ffe842e26..e8f694b57b8a 100644
  
  	/*
  	 * If the BIOS didn't enable everything it could, fall back to have the
---
-2.12.0
+-- 
+2.7.5
