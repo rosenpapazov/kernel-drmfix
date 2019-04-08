@@ -630,7 +630,8 @@ Patch516: 0001-inotify-Fix-fsnotify_mark-refcount-leak-in-inotify_u.patch
 
 # CVE-2019-3882 rhbz 1689426 1695571
 Patch517: vfio-type1-limit-dma-mappings-per-container.patch
-
+# Revert problematic patch
+Patch900: 0001-Revert-drm-i915-fbdev-Actually-configure-untiled-dis.patch
 # END OF PATCH DEFINITIONS
 
 %endif
