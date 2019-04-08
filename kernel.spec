@@ -631,8 +631,6 @@ Patch516: 0001-inotify-Fix-fsnotify_mark-refcount-leak-in-inotify_u.patch
 # CVE-2019-3882 rhbz 1689426 1695571
 Patch517: vfio-type1-limit-dma-mappings-per-container.patch
 
-Patch9000: drmfix.patch
-
 # END OF PATCH DEFINITIONS
 
 %endif
