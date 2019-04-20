@@ -626,7 +626,7 @@ Patch512: v3-tpm-fix-an-invalid-condition-in-tpm_common_poll.patch
 Patch515: nfsv4.1-avoid-false-retries.patch
 
 # CVE-2019-9857 rhbz 1694758 1694759
-Patch516: 0001-inotify-Fix-fsnotify_mark-refcount-leak-in-inotify_u.patch
+#Patch516: 0001-inotify-Fix-fsnotify_mark-refcount-leak-in-inotify_u.patch
 
 # CVE-2019-3882 rhbz 1689426 1695571
 Patch517: vfio-type1-limit-dma-mappings-per-container.patch
