@@ -620,7 +620,7 @@ Patch510: i915-enable-fastboot-on-vlv-chv.patch
 Patch511: 0001-virt-vbox-Implement-passing-requestor-info-to-the-ho.patch
 
 # rhbz 1688283
-Patch512: v3-tpm-fix-an-invalid-condition-in-tpm_common_poll.patch
+#Patch512: v3-tpm-fix-an-invalid-condition-in-tpm_common_poll.patch
 
 # rhbz 1683382
 Patch515: nfsv4.1-avoid-false-retries.patch
